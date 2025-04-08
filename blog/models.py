@@ -27,9 +27,12 @@ class Post(models.Model):
     def __str__(self):
         return f"{self.title} | written by {self.author}"
 
+    def category_name(self):
+        return self.category
+
 
 class Comment(models.Model):
-    """ Model for comments on posts"""
+    """ Model for comments on posts (walkthrough code)"""
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, related_name="comments")
     author = models.ForeignKey(
