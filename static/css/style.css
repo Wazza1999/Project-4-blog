@@ -6,11 +6,7 @@ body {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #4A4A4F;
-}
-
-.red-o {
-    color: #E84610;
+    color: grey;
 }
 
 .thin {
@@ -28,10 +24,17 @@ body {
 .main-bg {
     background-color: #F9FAFC;
 }
-
+/* Card  stylings*/
 .card {
     border: none;
     background-color: transparent;
+}
+
+.card-body{
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+    border: solid 3px black;
+    background-color: grey;
 }
 
 .image-container {
