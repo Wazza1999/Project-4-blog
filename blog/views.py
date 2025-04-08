@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Post, Comment
+from .models import Post, Comment, Category
 from .forms import CommentForm
 
 # Create your views here.
@@ -83,3 +83,10 @@ def comment_delete(request, slug, comment_id):
                              'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+def posts_by_category(request, slug):
+    category = get_object_or_404(Category, slug=slug)
+    post = Post.objects.filter(categories=category)
+    return render(request, 'blog/templates/index.html',
+                  {'category': Category, 'posts': Post})
