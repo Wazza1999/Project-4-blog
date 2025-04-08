@@ -7,12 +7,12 @@
     <div class="row">
         <div class="col-12 col-md-4 text-center">
         {% if "placeholder" in about.profile_image.url %}
-            <img src="{% static 'images/me.jpg' %}" width="100%" alt="placeholder image">
+            <img src="{% static 'images/me.jpg' %}" width="100%" alt="placeholder image" id="me">
         {% else %}
         <img src="{{ about.profile_image.url }}" width="75%" alt="{{ about.title }}">
         {% endif %}
         </div>
-        <div class="col-12 col-md-8">
+        <div class="col-12 col-md-8" id="aboutme">
             <h2>{{ about.title }}</h2>
             {{ about.content | safe }}
         </div>
@@ -25,7 +25,7 @@
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-12 col-md-6 my-5">
+        <div class="col-12 col-md-6 my-5" id="aboutcontainer">
             <h2>Let's collaborate!</h2>
             <p>I believe in the power of shared knowledge and collective effort.
                 Whether you have a project in mind, wish to co-author

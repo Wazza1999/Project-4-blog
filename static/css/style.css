@@ -1,4 +1,4 @@
-/* Body styling */
+/* Styling for the base.html*/
 body {
     background-color: #F9FAFC;
 }
@@ -102,6 +102,7 @@ img.card-img-top{
 }
 
 
+/* Styling for the Post-Detail.html */
 .profile-image {
     width: 75%;
     
@@ -175,3 +176,19 @@ img.card-img-top{
 .approval {
     color: rgb(222, 146, 168);
 }
+
+
+/* About Page Styling */
+
+#me{
+    border: solid 3px black;
+}
+
+#aboutme{
+    border: solid 3px black;
+}
+
+#aboutcontainer{
+    border: solid 3px black;
+}
+

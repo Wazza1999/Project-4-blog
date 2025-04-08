@@ -1,12 +1,12 @@
 
-### My Adventures in Northern Sweden
+### My Blog App
 
-![My Fishing Adventures](documentation/images/responsive.png)
+![Warrens Kitchen Blog](documentation/images/responsive.png)
 
 Portfolio 4 project as part of the Diploma in Full Stack Software Development by Code Institute.
 ___
 
-My Fishing Adventures is a blog, mainly to record and share my fishing trips, but also share other types/categories of content and allow users to interact with myself and others.
+Warrens Kitchen is a blog, mainly to record and share my culinary adventures both consuming and producing the food that I love and am discovering to love.
 
 It is a fullstack blog site that allows users to read blog posts, create an account and comment on the posts.
 
