@@ -62,7 +62,7 @@ body {
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 33vh;
+    height: 50vh;
     width: 100%;
 }
 
@@ -75,6 +75,7 @@ body {
 .masthead-image {
     position: relative;
     overflow: hidden;
+    height:auto
 }
 
 .masthead-image:after {
@@ -94,6 +95,7 @@ body {
 
 .profile-image {
     width: 75%;
+    
 }
 
 .post-link {
