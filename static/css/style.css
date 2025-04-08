@@ -36,7 +36,11 @@ a.navbar-brand {
     flex: 1 1 auto;
     padding: 1rem 1rem;
     border: solid 3px black;
-    background-color: grey;
+    background-color: white;
+}
+/* Image styling */
+img.card-img-top{
+    border: 3px solid black;
 }
 
 .image-container {
