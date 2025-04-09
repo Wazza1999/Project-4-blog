@@ -83,3 +83,9 @@ def comment_delete(request, slug, comment_id):
                              'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+def index(request):
+    """ Custom view made by me """
+    categories = Category.objects.all()
+    return render(request, 'index.html', {'categories': categories})
