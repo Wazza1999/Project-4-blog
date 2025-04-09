@@ -3,7 +3,12 @@ body {
     background-color: #F9FAFC;
 }
 
-/* navbar brand styling */
+/*django message styling*/
+#msg{
+    border: solid 3px black;
+}
+
+/* navbar styling */
 a.navbar-brand {
     text-align: center;
     font-family: "Great Vibes", cursive;
