@@ -192,6 +192,21 @@ img.card-img-top{
     text-align: center;
 }
 
+
+/* Signup page styling*/
+#signupbox1{
+    border: solid 3px black;
+    border-bottom: hidden;
+    text-align: center;
+    
+}
+
+#signupbox2{
+    border: solid 3px black;
+    
+}
+
+
 /* About Page Styling */
 
 #me{
