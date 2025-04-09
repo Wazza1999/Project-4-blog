@@ -177,6 +177,15 @@ img.card-img-top{
     color: rgb(222, 146, 168);
 }
 
+/*Styling for the sign out page */
+#signout{
+    border: solid 3px black;
+    text-align: center;
+}
+
+#signoutbutton{
+    text-align: center;
+}
 
 /* About Page Styling */
 
