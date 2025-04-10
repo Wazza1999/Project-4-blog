@@ -4,7 +4,7 @@
 <!-- index.html content starts here -->
 <div class="container-fluid">
         <div class="row">
-    
+            
             <!-- Blog Entries Column -->
             <div class="col-12 mt-3 left">
                 <div class="row">
@@ -44,6 +44,7 @@
                 </div>
             </div>
         </div>
+        <!-- Pagination -->
         {% if is_paginated %}
         <nav aria-label="Page navigation">
             <ul class="pagination justify-content-center">
@@ -57,18 +58,5 @@
         </nav>
         {% endif %}
     </div>
-    <div class="container" mt-5>
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                Sort by Category
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                {% for category in categories %}
-                <li><a class="dropdown-item" href="?category={{ category.id }}"> {{ category.name }}</a></li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-    
 {% endblock %}
 {% block copyright %} Copyright 2025 Warren Selby {% endblock %}

@@ -14,9 +14,9 @@
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="{% static 'images/chef.jpg' %}" class="img-thumbnail" alt="placeholder">
+                <img src="{% static 'images/chef.jpg' %}" class="scale" alt="placeholder">
                 {% else %}
-                <img src="{{ post.featured_image.url }}" class="img-fluid" alt="{{ post.title }}">
+                <img src="{{ post.featured_image.url }}" class="scale" alt="{{ post.title }}">
                 {% endif %}
             </div>
         </div>

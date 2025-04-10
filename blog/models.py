@@ -12,23 +12,20 @@ class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
-     User, on_delete=models.CASCADE, related_name="blog_posts")
-    content = models.TextField(null=True)
+     User, on_delete=models.CASCADE, related_name="blog_posts"
+     )
+    content = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
-    categories = models.ManyToManyField('Category', related_name="posts")
 
     class Meta:
         ordering = ["-created_on"]
 
     def __str__(self):
         return f"{self.title} | written by {self.author}"
-
-    def category_name(self):
-        return self.category
 
 
 class Comment(models.Model):
@@ -47,14 +44,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.author} "
-
-
-class Category(models.Model):
-    """Model for categorising the different posts
-       (custom model code made by me.)"""
-    name = models.CharField(max_length=100, unique=True)
-    slug = models.SlugField(max_length=100, unique=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return self.name

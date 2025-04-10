@@ -3,7 +3,7 @@
 {% url 'about' as about_url %} 
 {% url 'account_login' as login_url %} 
 {% url 'account_signup' as signup_url %}
-{%url 'account_logout' as logout_url %}
+{% url 'account_logout' as logout_url %}
 
 <!DOCTYPE html>
 <html class="h-100" lang="en">
@@ -158,7 +158,7 @@
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"
     ></script>
-    <script src="{% static 'js/script.js' %}"></script>
+    
       {% block extras %}
       {% endblock %}
   </body>

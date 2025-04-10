@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h1> Posts in "{{ category.name }}"</h1>
+<ul>
+    {% for posts in posts %}
+    <li>
+        <a href="{% url 'post_detail' post.slug %}">
+            {{ post.name }}
+            <h2 class="card-title">{{ post.title }}</h2>
+            <p class="card-text">{{ post.excerpt }}</p>
+        </a>
+    </li>
+    {% empty %}
+    <p>No posts found in this category.</p>
+    {% endfor %}
+</ul>
+<a href="{% url 'index' %}">Back to All Categories</a>
+{% endblock %}
