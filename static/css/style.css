@@ -3,6 +3,7 @@ body {
     background-color: #F9FAFC;
 }
 
+
 /*django message styling*/
 #msg{
     border: solid 3px black;
@@ -221,3 +222,12 @@ img.card-img-top{
     border: solid 3px black;
 }
 
+/* Categories Page Styling */
+
+#posttitle{
+    border:solid 3px black;
+}
+
+#background{
+    background-color: silver;
+}
