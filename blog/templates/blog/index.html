@@ -4,18 +4,21 @@
 <!-- index.html content starts here -->
 <div class="container-fluid">
         <div class="row">
-            <h1>All Categories</h1>
-            <ul>
+          
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="categoriesbutton" data-bs-toggle="dropdown" aria-expanded="false">All Categories</button>
+            <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
                 {% for category in categories %}
                 <li>
-                    <a href="{% url 'category_posts' category.slug %}">
+                    <a class="dropdown-item" href="{% url 'category_posts' category.slug %}">
                         {{ category.name }}
                     </a>
                 </li>
                 {% empty %}
-                <li>No Categories available</li>
+                <li class="dropdown-item">No Categories available</li>
                 {% endfor %}
             </ul>
+        </div>
             <!-- Blog Entries Column -->
             <div class="col-12 mt-3 left">
                 <div class="row">
