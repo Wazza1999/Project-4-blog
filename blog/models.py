@@ -7,9 +7,23 @@ STATUS = ((0, "Draft"), (1, "Published"))
 # Create your models here.
 
 
+class Category(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    slug = models.SlugField(max_length=100, unique=True)
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = self.name.lower().replace('', '-')
+
+    def __str__(self):
+        return self.name
+
+
 class Post(models.Model):
     """Model for individual posts (updated for personal use)"""
     title = models.CharField(max_length=200, unique=True)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE,
+                                 related_name='posts', default=1)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
      User, on_delete=models.CASCADE, related_name="blog_posts"
