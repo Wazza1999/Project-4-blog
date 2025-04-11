@@ -38,6 +38,10 @@ a.navbar-brand {
     background-color: transparent;
 }
 
+#card{
+    background-color: silver;
+}
+
 .card-body{
     flex: 1 1 auto;
     padding: 1rem 1rem;
@@ -183,10 +187,22 @@ img.card-img-top{
     color: rgb(222, 146, 168);
 }
 
+/* Stlying for the signin page */
+#signin{
+    border: solid 3px black;
+    background-color: silver;
+}
+
+#signincontainer{
+    border: solid 3px black;
+    background-color: silver;
+}
+
 /*Styling for the sign out page */
 #signout{
     border: solid 3px black;
     text-align: center;
+    background-color: silver;
 }
 
 #signoutbutton{
@@ -199,12 +215,12 @@ img.card-img-top{
     border: solid 3px black;
     border-bottom: hidden;
     text-align: center;
-    
+    background-color: silver;    
 }
 
 #signupbox2{
     border: solid 3px black;
-    
+    background-color: silver;    
 }
 
 
@@ -216,19 +232,18 @@ img.card-img-top{
 
 #aboutme{
     border: solid 3px black;
+    background-color: silver;
 }
 
 #aboutcontainer{
     border: solid 3px black;
+    background-color: silver;
 }
 
 /* Categories Page Styling */
 
 #posttitle{
     border:solid 3px black;
-    background: white;
-}
-
-#background{
     background-color: silver;
 }
+
