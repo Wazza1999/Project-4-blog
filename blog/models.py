@@ -24,7 +24,7 @@ class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE,
                                  related_name='posts', default=1)
-    slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True, blank=True)
     author = models.ForeignKey(
      User, on_delete=models.CASCADE, related_name="blog_posts"
      )
@@ -34,6 +34,11 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = self.name.lower().replace('', '-')
+        super().save(*args, **kwargs)
 
     class Meta:
         ordering = ["-created_on"]

@@ -9,10 +9,18 @@ from .forms import CommentForm
 
 
 class PostList(generic.ListView):
-
+    model = Post
     queryset = Post.objects.filter(status=1)
     template_name = "blog/index.html"
     paginate_by = 6
+
+    context_object_name = 'posts'
+
+    def get_context_data(slef, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categories'] = Category.objects.all()
+
+        return context
 
 
 def post_detail(request, slug):
@@ -91,5 +99,23 @@ def posts_in_category(request, categorys_name):
     category = get_object_or_404(Category, name=categorys_name)
     posts = Category.posts.all()
 
-    return render(request, 'blog/categorys_posts.html', {'category': category,
-                                                         'posts': posts})
+    return render(request, 'blog/index.html', {'category': category,
+                                               'posts': posts})
+
+
+class CategoryPostsListView(generic.ListView):
+    model = Post
+    template_name = 'blog/category_posts.html'
+    context_object_name = 'posts'
+
+    def get_queryset(self):
+        category_slug = self.kwargs['category_slug']
+        category = get_object_or_404(Category, slug=category_slug)
+        return Post.objects.filter(category=category)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['category'] = get_object_or_404(Category,
+                                                slug=self.kwargs
+                                                ['category_slug'])
+        return context
