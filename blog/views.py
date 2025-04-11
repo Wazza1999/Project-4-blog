@@ -12,11 +12,11 @@ class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1)
     template_name = "blog/index.html"
-    paginate_by = 6
+    paginate_by = 3
 
     context_object_name = 'posts'
 
-    def get_context_data(slef, **kwargs):
+    def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['categories'] = Category.objects.all()
 
@@ -97,7 +97,7 @@ def comment_delete(request, slug, comment_id):
 
 def posts_in_category(request, categorys_name):
     category = get_object_or_404(Category, name=categorys_name)
-    posts = Category.posts.all()
+    posts = Post.objects.filter(category=category)
 
     return render(request, 'blog/index.html', {'category': category,
                                                'posts': posts})
