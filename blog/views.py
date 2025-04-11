@@ -23,6 +23,9 @@ class PostList(generic.ListView):
         return context
 
 
+""" Walkthrough code for show details in each post"""
+
+
 def post_detail(request, slug):
 
     queryset = Post.objects.filter(status=1)
@@ -55,6 +58,9 @@ def post_detail(request, slug):
     )
 
 
+""" Walkthrough view for editing comments """
+
+
 def comment_edit(request, slug, comment_id):
     """
     view to edit comments
@@ -79,6 +85,9 @@ def comment_edit(request, slug, comment_id):
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
+""" Walkthrough view for deleting a comment """
+
+
 def comment_delete(request, slug, comment_id):
 
     queryset = Post.objects.filter(status=1)
@@ -95,12 +104,18 @@ def comment_delete(request, slug, comment_id):
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
+""" Custom view for showing categories in index.html  """
+
+
 def posts_in_category(request, categorys_name):
     category = get_object_or_404(Category, name=categorys_name)
     posts = Post.objects.filter(category=category)
 
     return render(request, 'blog/index.html', {'category': category,
                                                'posts': posts})
+
+
+""" Custom view for sending posts to the category_posts page """
 
 
 class CategoryPostsListView(generic.ListView):

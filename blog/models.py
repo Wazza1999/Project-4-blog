@@ -8,6 +8,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Category(models.Model):
+    """ Custom model for having categories in the database  """
     name = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
 
