@@ -191,11 +191,13 @@ img.card-img-top{
 #signin{
     border: solid 3px black;
     background-color: silver;
+    text-align: center;
 }
 
 #signincontainer{
     border: solid 3px black;
     background-color: silver;
+    padding: 10px;
 }
 
 /*Styling for the sign out page */
@@ -215,12 +217,19 @@ img.card-img-top{
     border: solid 3px black;
     border-bottom: hidden;
     text-align: center;
-    background-color: silver;    
+    background-color: silver;
+    padding: 16px;
 }
 
 #signupbox2{
     border: solid 3px black;
-    background-color: silver;    
+    background-color: silver;
+    padding: 16px;
+}
+
+#signup_form{
+    list-style-type: none;
+    padding: 10px;
 }
 
 
@@ -239,7 +248,7 @@ img.card-img-top{
 #aboutcontainer{
     border: solid 3px black;
     background-color: silver;
-    padding: 16px;
+    padding: 10px;
 }
 
 #collaborateposttitle{
