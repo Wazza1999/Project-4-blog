@@ -12,9 +12,9 @@
         <img src="{{ about.profile_image.url }}" width="75%" alt="{{ about.title }}">
         {% endif %}
         </div>
-        <div class="col-12 col-md-8" id="aboutme">
-            <h2>{{ about.title }}</h2>
-            {{ about.content | safe }}
+        <div class="col-12 col-md-8" id="aboutmepadding">
+            <div class="col-12 col-md-12" id="aboutmetitlebox"><h2>{{ about.title }}</h2>
+                {{ about.content | safe }}</div>
         </div>
     </div>
     <div class="row">
@@ -24,7 +24,7 @@
           <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
         </div>
     </div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" id="aboutmebox">
         <div class="col-12 col-md-6 my-5" id="aboutcontainer">
             <h2 id="collaborateposttitle">Let's collaborate!</h2>
             <p id="collaborateposttext">I believe in the power of shared knowledge and collective effort.

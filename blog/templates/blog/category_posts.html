@@ -1,14 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<h1><b id="posttitle">Posts in "{{ category.name }}"</b></h1>
+<div class="container">
+<h1 id="posttitle">Posts in {{ category.name }}</h1>
+</div>
 <!-- Blog Entries Column -->
 <div class="col-12 mt-3 left">
     <div class="row">
         {% for post in posts %}
         <div class="col-md-4">
             <div class="card mb-4">
-                <div class="card-body">
+                <div class="card-body" id="card">
                     <div class="image-container">
                         {% if "placeholder" in post.featured_image.url %}
                         <img class="card-img-top" src="{% static 'images/chef.jpg' %}"
@@ -22,12 +24,12 @@
 
                     </div>
                     <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                        <h2 class="card-title">{{ post.title }}</h2>
-                        <p class="card-text">{{ post.excerpt }}</p>
+                        <h2 class="card-title" id="cardtext">{{ post.title }}</h2>
+                        <p class="card-text" id="cardtext">{{ post.excerpt }}</p>
                     </a>
 
                     <hr />
-                    <p class="card-text text-muted h6">{{ post.created_on}}
+                    <p class="card-text h6" id="cardtext">{{ post.created_on}}
                     </p>
                 </div>
             </div>

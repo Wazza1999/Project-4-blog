@@ -36,10 +36,15 @@ a.navbar-brand {
 .card {
     border: none;
     background-color: transparent;
+    padding: 10px;
 }
 
 #card{
     background-color: silver;
+}
+
+#cardtext{
+    color: black;
 }
 
 .card-body{
@@ -94,7 +99,7 @@ img.card-img-top{
 .masthead-image {
     position: relative;
     overflow: hidden;
-    height:auto
+    height:auto;
 }
 
 .masthead-image:after {
@@ -194,6 +199,10 @@ img.card-img-top{
     text-align: center;
 }
 
+#signinbox{
+    padding: 10px;
+}
+
 #signincontainer{
     border: solid 3px black;
     background-color: silver;
@@ -207,15 +216,23 @@ img.card-img-top{
     background-color: silver;
 }
 
+#signoutpadding{
+    padding: 10px;
+}
+
 #signoutbutton{
     text-align: center;
 }
 
 
 /* Signup page styling*/
+
+#signupbox{
+    padding: 10px;
+}
+
 #signupbox1{
     border: solid 3px black;
-    border-bottom: hidden;
     text-align: center;
     background-color: silver;
     padding: 16px;
@@ -239,7 +256,16 @@ img.card-img-top{
     border: solid 3px black;
 }
 
-#aboutme{
+#aboutmebox{
+    padding: 10px;
+}
+
+#aboutmepadding{
+    padding: 10px;
+}
+
+#aboutmetitlebox{
+    padding: 32px;
     border: solid 3px black;
     background-color: silver;
     text-align: center;
@@ -269,12 +295,13 @@ img.card-img-top{
 #posttitle{
     border:solid 3px black;
     background-color: silver;
+    text-align: center;
 }
 
 /* Media queries */
-@media (max-width: 728px) {
-    img {
-        max-width: 100%;
+@media (max-width: 320px) {
+    img.scale {
+        width: 100%;
         height: auto;
     }
 }
