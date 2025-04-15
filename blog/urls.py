@@ -1,6 +1,6 @@
 from . import views
 from django.urls import path
-from .views import CategoryPostsListView
+from .views import CategoryPostsListView, manage_posts
 
 
 urlpatterns = [
@@ -12,4 +12,5 @@ urlpatterns = [
          views.comment_edit, name='comment_edit'),
     path('<slug:slug>/delete_comment/<int:comment_id>',
          views.comment_delete, name='comment_delete'),
+    path('manage_posts/', manage_posts, name='manage_posts'),
 ]

@@ -1,9 +1,10 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.contrib.auth.decorators import login_required
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment, Category
-from .forms import CommentForm
+from .forms import CommentForm, PostForm
 
 # Create your views here.
 
@@ -21,6 +22,27 @@ class PostList(generic.ListView):
         context['categories'] = Category.objects.all()
 
         return context
+
+
+""" My code for adding, updating and deleting a post as a logged in user """
+
+
+@login_required
+def manage_posts(request):
+    if request.method == "POST":
+        form = PostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+
+            post.save()
+            return redirect("home")
+        else:
+            form = PostForm()
+
+        user_posts = Post.objects.filter(author=request.user)
+        return render(request, "manage_posts.html",
+                      {"form": form, "posts": user_posts})
 
 
 """ Walkthrough code for show details in each post"""

@@ -1,5 +1,13 @@
-from .models import Comment
+from .models import Comment, Post
 from django import forms
+"""My code for adding, deleting and updating posts"""
+
+
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ["title", "content"]
+
 
 """Walkthrough code for Comments"""
 
