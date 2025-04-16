@@ -298,6 +298,14 @@ img.card-img-top{
     text-align: center;
 }
 
+/* Add a post page styling */
+#addpostcontainer{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 10px;
+}
+
 /* Media queries */
 @media (max-width: 320px) {
     img.scale {

@@ -1,13 +1,19 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<div class="container mt-5">
-    <h2>Add a new post</h2>
-    <form method="POST">
+<div class="row" id="addpostcontainer">
+    <div class="col-md-8 mt-3 offset-md-2">
+        <h2>Add a new post</h2>
+    <form class="addpost" method="POST" id="postform">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn btn-primary">Save Post</button>
     </form>
+    </div>
 </div>
+{% endblock %}
+{% block copyright %} Copyright 2025 Warren Selby {% endblock %}
 
+{% block extras %}
+<script src="{% static 'js/comments.js' %}"></script>
 {% endblock %}
