@@ -319,6 +319,18 @@ img.card-img-top{
     background-color: silver;
 }
 
+/* Edit a Post Styling */
+#edittitle{
+    border: 3px solid black;
+    background-color: silver;
+    padding: 10px;
+}
+
+#editform{
+    border: 3px solid black;
+    background-color: silver;
+    padding: 10px;
+}
 /* Media queries */
 @media (max-width: 320px) {
     img.scale {

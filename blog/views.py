@@ -65,16 +65,16 @@ def edit_post(request, post_id):
 
     if post.author != request.user:
         return redirect("post_detail", post_id=post.id)
-    
+
     if request.method == "POST":
         form = PostForm(request.POST, request.FILES, instance=post)
-        if form.is_vlaid():
+        if form.is_valid():
             form.save()
-            return redirect("post_detail", post_id=post.id)
-    
+            return redirect("post_detail", post.slug)
+
     else:
         form = PostForm(instance=post)
-    
+
     return render(request, "blog/edit_post.html", {"form": form, "post": post})
 
 
