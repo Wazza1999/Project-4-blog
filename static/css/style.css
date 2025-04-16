@@ -306,6 +306,19 @@ img.card-img-top{
     padding: 10px;
 }
 
+#addposttitle{
+    border: 3px solid black;
+    text-align: center;
+    padding: 10px;
+    background-color: silver;
+}
+
+#postform{
+    border: 3px solid black;
+    padding: 10px;
+    background-color: silver;
+}
+
 /* Media queries */
 @media (max-width: 320px) {
     img.scale {

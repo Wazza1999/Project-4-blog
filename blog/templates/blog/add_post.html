@@ -3,7 +3,7 @@
 {% block content %}
 <div class="row" id="addpostcontainer">
     <div class="col-md-8 mt-3 offset-md-2">
-        <h2>Add a new post</h2>
+        <h2 id="addposttitle">Add a new post</h2>
     <form class="addpost" method="POST" id="postform">
         {% csrf_token %}
         {{ form.as_p }}
