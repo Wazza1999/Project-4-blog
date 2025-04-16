@@ -24,7 +24,7 @@ class PostList(generic.ListView):
         return context
 
 
-""" My code for adding, updating and deleting a post as a logged in user """
+""" My code for adding a post as a logged in user """
 
 
 @login_required
@@ -41,6 +41,19 @@ def add_post(request):
         form = PostForm()
 
     return render(request, "blog/add_post.html", {"form": form})
+
+
+""" My code for deleting a post """
+
+
+@login_required
+def delete_post(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+
+    if post.author == request.user:
+        post.delete()
+        return redirect("home")
+    return redirect("post_detail", post_id=post.id)
 
 
 """ Walkthrough code for show details in each post"""
