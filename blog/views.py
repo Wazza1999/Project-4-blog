@@ -56,6 +56,28 @@ def delete_post(request, post_id):
     return redirect("post_detail", post_id=post.id)
 
 
+"""My code updating a post"""
+
+
+@login_required
+def edit_post(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+
+    if post.author != request.user:
+        return redirect("post_detail", post_id=post.id)
+    
+    if request.method == "POST":
+        form = PostForm(request.POST, request.FILES, instance=post)
+        if form.is_vlaid():
+            form.save()
+            return redirect("post_detail", post_id=post.id)
+    
+    else:
+        form = PostForm(instance=post)
+    
+    return render(request, "blog/edit_post.html", {"form": form, "post": post})
+
+
 """ Walkthrough code for show details in each post"""
 
 
