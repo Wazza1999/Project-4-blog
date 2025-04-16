@@ -28,21 +28,19 @@ class PostList(generic.ListView):
 
 
 @login_required
-def manage_posts(request):
+def add_post(request):
     if request.method == "POST":
-        form = PostForm(request.POST)
+        form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
 
             post.save()
             return redirect("home")
-        else:
-            form = PostForm()
+    else:
+        form = PostForm()
 
-        user_posts = Post.objects.filter(author=request.user)
-        return render(request, "manage_posts.html",
-                      {"form": form, "posts": user_posts})
+    return render(request, "blog/add_post.html", {"form": form})
 
 
 """ Walkthrough code for show details in each post"""

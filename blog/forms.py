@@ -1,4 +1,5 @@
 from .models import Comment, Post
+from django_summernote.widgets import SummernoteWidget
 from django import forms
 """My code for adding, deleting and updating posts"""
 
@@ -6,7 +7,10 @@ from django import forms
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ["title", "content"]
+        fields = ["title", "category", "content", "featured_image", "status"]
+        widgets = {
+            'content': SummernoteWidget(),
+        }
 
 
 """Walkthrough code for Comments"""
