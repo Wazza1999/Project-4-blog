@@ -267,13 +267,6 @@ Desktop
 
 HTML & CSS testing was completed using [W3 Validator](https://validator.w3.org/)
 
-When validating the code, I had the error shown below. this was fixed by removing the button and using Bootstrap styles to display the link as a button instead
-
-![HTML Validation - Descendant Error](documentation/testing_documentation/validation/base.html_button_descendant.png)
-
-Fixed:
-
-![HTML Validation Complete- base.html](documentation/testing_documentation/validation/index.html_validation_complete.png)
 
 ## Python Testing
 
@@ -347,7 +340,7 @@ This project was based on the Code Institute's - I think therefore I blog walkth
 
 I also added several custom Views and Forms to the site, as well as ensuring that all links and desired functionality was working as intended with no errors.
 
-The Readme layout was based on the example by [Kera Cudmore - Readme Examples](https://github.com/kera-cudmore/readme-examples/blob/main/README.md?plain=1) and [Sdalsosa - Readme](https://github.com/Sdalsosa/ComposerHub/blob/main/README.md)
+The Readme layout was based on the example by [Mark Daniel - Readme Example](https://github.com/markdaniel1982/MD82-P4/tree/main)
 
 The wireframe mockups were created using [Wireframecc](https://wireframe.cc/)
 
