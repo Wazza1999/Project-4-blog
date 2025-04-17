@@ -214,7 +214,11 @@ img.card-img-top{
     text-align: center;
 }
 
-#signinbox{
+#signinbox1{
+    padding: 10px;
+}
+
+#signinbox2{
     padding: 10px;
 }
 
