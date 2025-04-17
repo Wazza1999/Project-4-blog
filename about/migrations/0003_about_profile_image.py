@@ -14,6 +14,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='about',
             name='profile_image',
-            field=cloudinary.models.CloudinaryField(default='placeholder', max_length=255),
+            field=cloudinary.models.CloudinaryField(default='placeholder',
+                                                    max_length=255),
         ),
     ]
