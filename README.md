@@ -215,73 +215,7 @@ This project was designed using Agile methodology, utilising the Project Board a
 
 # Testing
 
-As each section or Function/Model was built during this project, I was testing for functionality and styling issues that may have arisen (see table below), which were corrected or fixed before continuing. I also had friends test the site by signing up, adding and deleting comments using various devices on varying platforms (IOS, Android, Mobile, Tablet etc) and reporting back any issues they encountered with functionality or styling.
-
-## Manual Testing
-
-_For any Fails, there is a more detailed description below the table_
-
-ADMIN
-| TEST | OUTCOME | PASS/FAIL|
-|:---:|:---:|:---:|
-| Create Blog Post | Post successfully created and displayed | Pass |
-| Edit Blog Post | Editing post in the website successful | Pass |
-| Delete Blog Post | Deleting selected post successfull | Pass |
-| Delete User Comments | Comment deleted successfully | Pass |
-| Create 4 Test Posts to check Pagination | Next/Previous Page Appears at bottom of screen | Pass |
-
-## User
-
-|                                TEST                                |                                  OUTCOME                                   | PASS/FAIL |
-| :----------------------------------------------------------------: | :------------------------------------------------------------------------: | :-------: |
-|                           Create Account                           |                            Created successfully                            |   Pass    |
-|                               Login                                |                              Login Successful                              |   Pass    |
-|                               Logout                               |                             Logout Successful                              |   Pass    |
-|                        Read Full Blog Post                         |                    PostDetail page loaded successfully                     |   Pass    |
-|                          Add a Blog Post                           |        Add a post page loaded successfully and addition successful         |   Pass    |
-|                          Delete Blog Post                          |                  Delete post button working successfully                   |   Pass    |
-|                     Add Comment under Blogpost                     |                         Comment Added Successfully                         |   Pass    |
-|                           Delete Comment                           |                              Comment Deleted                               |   Pass    |
-|                      Filter Posts by category                      |          Posts marked as selected category displayed successfully          |   Pass    |
-| Create User Account to check access to restricted pages (add_post) | Page displayed correct error message, with no access to restricted content |   Pass    |
-
-(\*) See Bugs below
-
-## Bugs
-
-## Lighthouse
-
-The performance scores appear to be low, and I believe this is due to the images uploaded for each blog post being hosted on a third-party cloud-based platform.
-
-Mobile
-
-![Lighthouse Mobile Score](documentation/images/lighthouse_mobile.png)
-
-Desktop
-
-![Lighthouse Desktop Score](documentation/images/lighthouse_desktop.png)
-
-## Validation Testing
-
-### HTML & CSS
-
-HTML & CSS testing was completed using [W3 Validator](https://validator.w3.org/)
-
-
-## Python Testing
-
-Python pep8 validation was done via [Code Institute's Python Linter](https://pep8ci.herokuapp.com/)
-
-The only errors recieved here were where some lines of text exceeded the limit of 79 characters, but these have now been rectified.
-
-Python Files Tested:
-
-- models
-- forms
-- views
-- urls
-
----
+- Please refer to the TESTING.md page for all tests done for this project.[TESTING.md](/TESTING.md)
 
 ## Deployment
 

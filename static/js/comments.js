@@ -8,6 +8,7 @@ const deleteButtons = document.getElementsByClassName("btn-delete");
 const deleteConfirm = document.getElementById("deleteConfirm");
 
 /**
+ * Walkthrough code.
  * Initializes edit functionality for the provided edit buttons.
  *
  * For each button in the `editButtons` collection:
@@ -30,6 +31,7 @@ for (let button of editButtons) {
 }
 
 /**
+ * Walkthrough code.
  * Initializes deletion functionality for the provided delete buttons.
  *
  * For each button in the `deleteButtons` collection:

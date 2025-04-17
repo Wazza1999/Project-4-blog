@@ -1,6 +1,8 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
 
+"""Walkthrough code for the about page"""
+
 
 class About(models.Model):
     title = models.CharField(max_length=200)
@@ -10,6 +12,9 @@ class About(models.Model):
 
     def __str__(self):
         return self.title
+
+
+""" Walkthrough code for the collaboration form"""
 
 
 class CollaborateRequest(models.Model):

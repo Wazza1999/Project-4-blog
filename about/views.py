@@ -3,6 +3,8 @@ from django.contrib import messages
 from .models import About
 from .forms import CollaborateForms
 
+"""Walkthrough code for About collaboration View"""
+
 
 def about_me(request):
 
@@ -12,7 +14,7 @@ def about_me(request):
             collaborate_form.save()
             messages.add_message(
                 request, messages.SUCCESS,
-                "Collaboration request recieved! I endeavour to respond within 2 working days") # noqa
+                "Collaboration request recieved! I endeavour to respond within 2 working days")  # noqa
     about = About.objects.all().order_by('-updated_on').first()
     collaborate_form = CollaborateForms()
 

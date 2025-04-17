@@ -86,10 +86,10 @@ li.nav-item {
   color: black;
 }
 /* Image styling */
-img.card-img-top{
+img.card-img-top {
   border: 3px solid black;
-  width: 415;
-  height: 548;
+  width: 415px;
+  height: 548px;
   object-fit: inherit;
 }
 

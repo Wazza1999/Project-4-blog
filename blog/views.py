@@ -8,6 +8,8 @@ from .forms import CommentForm, PostForm
 
 # Create your views here.
 
+""" Walkthrough code customised by me """
+
 
 class PostList(generic.ListView):
     model = Post
@@ -24,7 +26,7 @@ class PostList(generic.ListView):
         return context
 
 
-""" My code for adding a post as a logged in user """
+""" My custom code for adding a post as a logged in user """
 
 
 @login_required
@@ -43,7 +45,7 @@ def add_post(request):
     return render(request, "blog/add_post.html", {"form": form})
 
 
-""" My code for deleting a post """
+""" My custom code for deleting a post """
 
 
 @login_required
@@ -56,7 +58,7 @@ def delete_post(request, post_id):
     return redirect("post_detail", post_id=post.id)
 
 
-"""My code updating a post"""
+"""My custom code updating a post"""
 
 
 @login_required
@@ -78,7 +80,7 @@ def edit_post(request, post_id):
     return render(request, "blog/edit_post.html", {"form": form, "post": post})
 
 
-""" Walkthrough code for show details in each post"""
+""" Walkthrough code cusomtised by me for showing details in each post"""
 
 
 def post_detail(request, slug):
@@ -157,7 +159,7 @@ def comment_delete(request, slug, comment_id):
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
-""" Custom view for showing categories in index.html  """
+""" Custom view made by me for showing categories in index.html  """
 
 
 def posts_in_category(request, categorys_name):

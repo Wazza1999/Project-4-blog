@@ -4,6 +4,8 @@ from django.test import TestCase
 from .forms import CommentForm
 from .models import Post
 
+""" Walkthrough code for tests """
+
 
 class TestBlogViews(TestCase):
 

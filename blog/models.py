@@ -8,7 +8,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Category(models.Model):
-    """ Custom model for having categories in the database  """
+    """ Custom model by me for having categories in the database  """
     name = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
 
@@ -22,7 +22,8 @@ class Category(models.Model):
 
 
 class Post(models.Model):
-    """Model for individual posts (updated for personal use)"""
+    """Walkthrough Model cusomtised by me for individual posts,
+      (updated for personal use)"""
     title = models.CharField(max_length=200, unique=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE,
                                  related_name='posts', default=1)
@@ -50,7 +51,7 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    """ Model for comments on posts (walkthrough code)"""
+    """Walkthrough code for model for comments on posts"""
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, related_name="comments")
     author = models.ForeignKey(

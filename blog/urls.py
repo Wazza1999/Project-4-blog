@@ -2,7 +2,7 @@ from . import views
 from django.urls import path, include
 from .views import CategoryPostsListView, add_post, delete_post, edit_post
 
-
+""" Walkthrough and custom url patterns """
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
     path('category/<slug:category_slug>/', CategoryPostsListView.as_view(),
