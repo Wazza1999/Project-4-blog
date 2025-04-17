@@ -32,6 +32,10 @@ DEBUG = False
 
 ALLOWED_HOSTS = [".herokuapp.com", "127.0.0.1", "localhost"]
 
+CLOUDINARY_STORAGE = {
+    'CLOUDINARY_URL': os.environ.get('CLOUDINARY_URL'),
+    'SECURE': True
+}
 
 # Application definition
 
