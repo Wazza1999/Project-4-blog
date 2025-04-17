@@ -35,7 +35,7 @@
       <div class="card-body">
         <!-- The post content goes inside the card-text. -->
         <!-- Use the | safe filter inside the template tags -->
-        <div class="card-text"><h2>{{ post.content | safe }}</h2></div>
+        <div class="card-text">{{ post.content | safe }}</div>
       </div>
       {% if user == post.author %}
 <div class="col-md-9 card mb-6 mt-5" id="deletebutton">
