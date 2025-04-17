@@ -14,6 +14,8 @@ from pathlib import Path
 import os
 import sys
 import dj_database_url
+import cloudinary
+cloudinary.config(secure=True)
 if os.path.isfile('env.py'):
     import env # noqa
 
@@ -31,11 +33,6 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = False
 
 ALLOWED_HOSTS = [".herokuapp.com", "127.0.0.1", "localhost"]
-
-CLOUDINARY_STORAGE = {
-    'CLOUDINARY_URL': os.environ.get('CLOUDINARY_URL'),
-    'SECURE': True
-}
 
 # Application definition
 
