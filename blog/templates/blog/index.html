@@ -7,7 +7,7 @@
           <!-- Dropdown button for the categories-->
             <div class="dropdown">
                 <button class="btn btn-primary dropdown-toggle" type="button" id="categoriesbutton" data-bs-toggle="dropdown" aria-expanded="false">All Categories</button>
-            <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+            <ul class="dropdown-menu">
                 {% for category in categories %}
                 <li>
                     <a class="dropdown-item" href="{% url 'category_posts' category.slug %}">
