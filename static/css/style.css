@@ -32,6 +32,24 @@ a.navbar-brand {
 .main-bg {
     background-color: #F9FAFC;
 }
+
+.btn-link{
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    user-select: none;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    text-transform: none;
+}
 /* Card  stylings*/
 .card {
     border: none;
