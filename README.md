@@ -290,7 +290,9 @@ All other content and images are my own.
 
 ## Acknowledgments and Thanks
 
-Oisin, Rebecca and Gemma at Code Institute's tutor support for the help and guidance with my code-related brain melts.
+Oisin, Rebecca and Gemma and Roman at Code Institute's tutor support for the help and guidance with my code-related brain melts.
+
+Jubril with the help in mentor sessions
 
 For help with manual testing:
 
