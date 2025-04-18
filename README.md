@@ -149,7 +149,9 @@ Here is a diagram showing the possible flow through the site. There are 2 sectio
 
 The database plan is fairly simple, but it shows the information that is stored within the database, the type of data and if it is logged as a Primary or Foreign key where applicable.
 
-![Database plan](documentation/images/database.png)
+![Database plan for blog app](documentation/images/erd1.png)
+
+![Database plane for About app](documentation/images/erd2.png)
 
 # Features
 
