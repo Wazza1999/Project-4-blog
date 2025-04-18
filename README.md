@@ -272,7 +272,7 @@ To create a clone you do the following;
 
 ## Credits
 
-This project was based on the Code Institute's - I think therefore I blog walkthrough module which provided a standard blog 'base'. From this base I customised a lot of the layout and styling with Bootstrap and custom CSS. I also added a custom model for Category. This allowed me to create a functionality within the site for users to filter the blog posts by a selected category.
+This project was based on the Code Institute's - I think therefore I blog walkthrough module which provided a standard blog 'base'. From this base I customised a lot of the layout and styling with Bootstrap and custom CSS. I also added a custom model for Category. This allowed me to create a functionality within the site for users to filter the blog posts by a selected category and add a post but you will see code from the walkthrough included but that is all commented in each section.
 
 I also added several custom Views and Forms to the site, as well as ensuring that all links and desired functionality was working as intended with no errors.
 
